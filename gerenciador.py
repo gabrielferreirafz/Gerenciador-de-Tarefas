@@ -58,6 +58,22 @@ while fechar_programa == False:
         adicionar(nova_tarefa)
         input('Pressione Enter para voltar ao menu inicial: ')
         os.system('cls')
+    elif acao_usuario == 3:
+        os.system('cls')
+        ver_tarefas(lista_tarefas)
+        tarefa_deletada = input('informe a tarefa que você deseja excluir da lista: ').lower()
+        lista_tarefas.pop(lista_tarefas.index(tarefa_deletada))
+        print('Tarefa excluída com sucesso!')
+        input('Pressione enter para voltar ao menu inicial: ')
+        os.system('cls')
+    elif acao_usuario == 4:
+        os.system('cls')
+        ver_tarefas(lista_tarefas)
+        tarefa_edit = input('qual tarefa você deseja editar: ').lower() 
+        lista_tarefas[lista_tarefas.index(tarefa_edit)] = input('Qual a alteração que deseja fazer: ')
+        print('Tarefa alterada com sucesso!')
+        input('Pressione enter para voltar ao menu: ')
+        os.system('cls')
     elif acao_usuario == 5:
         os.system('cls')
         print('Programa Finalizado')
